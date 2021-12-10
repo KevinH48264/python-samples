@@ -68,10 +68,11 @@ Initialize the database using SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from SECRET_KEY import mysql_key
 import os
 
 # FROM AMAZON RDS
-engine = create_engine('mysql://admin:codetranslate2021!@codetranslatedb.curusflffqkl.us-east-2.rds.amazonaws.com:3306/codetranslatedb')
+engine = create_engine(mysql_key)
 
 # LOCAL
 # parent_directory = (os.path.dirname(os.path.abspath(os.path.join(__file__, os.pardir))))
